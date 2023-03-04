@@ -12,6 +12,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "PhotoCollectionViewCell"
     
+    //MARK: - UI
     let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .lightGray
@@ -21,6 +22,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .gray

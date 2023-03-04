@@ -69,9 +69,9 @@
 			children = (
 				419A9B4D29B1E84400D8A5DC /* SceneDelegate.swift */,
 				419A9B4B29B1E84400D8A5DC /* AppDelegate.swift */,
-				419A9B6229B2261C00D8A5DC /* FilterService.swift */,
+				419A9B6729B2F04000D8A5DC /* Models */,
 				419A9B6629B22B0300D8A5DC /* View */,
-				419A9B6129B21F2700D8A5DC /* ViewController */,
+				419A9B6129B21F2700D8A5DC /* Controller */,
 				419A9B5629B1E84600D8A5DC /* LaunchScreen.storyboard */,
 				419A9B5429B1E84600D8A5DC /* Assets.xcassets */,
 				419A9B5929B1E84600D8A5DC /* Info.plist */,
@@ -79,13 +79,13 @@
 			path = my_ios_cameraFilter_byRxSwift;
 			sourceTree = "<group>";
 		};
-		419A9B6129B21F2700D8A5DC /* ViewController */ = {
+		419A9B6129B21F2700D8A5DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				419A9B4F29B1E84400D8A5DC /* MainViewController.swift */,
 				419A9B5F29B1ED2300D8A5DC /* PhotoCollectionViewController.swift */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		419A9B6629B22B0300D8A5DC /* View */ = {
@@ -94,6 +94,14 @@
 				419A9B6429B2294400D8A5DC /* PhotoCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		419A9B6729B2F04000D8A5DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				419A9B6229B2261C00D8A5DC /* FilterService.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		44D64D7A7300048CEE7D35BF /* Frameworks */ = {

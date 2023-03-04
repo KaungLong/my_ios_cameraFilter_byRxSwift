@@ -12,15 +12,13 @@ import RxSwift
 
 class PhotoCollectionViewController: UICollectionViewController {
     
-    
+    private var images = [PHAsset]()
     private let selectedPhotoSubject = PublishSubject<UIImage>()
     var selectedPhoto: Observable<UIImage> {
         return selectedPhotoSubject.asObservable()
     }
-    
-    private var images = [PHAsset]()
    
-    
+    //MARK: - init
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -28,11 +26,11 @@ class PhotoCollectionViewController: UICollectionViewController {
         super.init(collectionViewLayout: layout)
     }
 
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +49,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let selectedAsset = self.images[indexPath.row]
-        PHImageManager.default().requestImage(for: selectedAsset, targetSize: CGSize(width: 100, height: 100), contentMode: .aspectFit, options: nil) { [weak self] image, info in
+        PHImageManager.default().requestImage(for: selectedAsset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: nil) { [weak self] image, info in
             
             guard let info = info else { return }
             

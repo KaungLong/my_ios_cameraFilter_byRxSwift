@@ -13,9 +13,10 @@ class MainViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    //MARK: - UI
     let MainPhotoImageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .lightGray
+        imageView.backgroundColor = .white
         imageView.image = UIImage(systemName: "")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
@@ -26,35 +27,19 @@ class MainViewController: UIViewController {
         var config = UIButton.Configuration.bordered()
         let button = UIButton(configuration: config)
         button.backgroundColor = .lightGray
+        button.isHidden = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("FilterButton", for: .normal)
         return button
     }()
     
-    
+    //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupNavigationUI()
         FilterButton.addTarget(self, action: #selector(applyFilterButtonPressed), for: .touchUpInside)
-    }
-    
-    @objc func applyFilterButtonPressed() {
-        
-        guard let sourceImage = self.MainPhotoImageView.image else {
-            return
-        }
-        
-       FiltersService().applyFilter(to: sourceImage)
-        .subscribe(onNext: { filteredImage in
-            
-            DispatchQueue.main.async {
-                self.MainPhotoImageView.image = filteredImage
-            }
-            
-        }).disposed(by: disposeBag)
-        
     }
     
     func setupNavigationUI() {
@@ -75,16 +60,6 @@ class MainViewController: UIViewController {
             make.top.equalTo(MainPhotoImageView.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
         }
-        
-        
-    
-    }
-    
-    @objc func addPhotoView() {
-        let photosCVC = PhotoCollectionViewController()
-        prepare(for: photosCVC)
-        let addPhotoNC = UINavigationController(rootViewController: photosCVC )
-        present(addPhotoNC, animated: true, completion: nil)
     }
     
     func prepare(for photosCVC: PhotoCollectionViewController) {
@@ -101,5 +76,30 @@ class MainViewController: UIViewController {
         self.MainPhotoImageView.image = image
         self.FilterButton.isHidden = false
     }
+    
+    @objc func addPhotoView() {
+        let photosCVC = PhotoCollectionViewController()
+        prepare(for: photosCVC)
+        let addPhotoNC = UINavigationController(rootViewController: photosCVC )
+        present(addPhotoNC, animated: true, completion: nil)
+    }
+    
+    @objc func applyFilterButtonPressed() {
+        
+        guard let sourceImage = self.MainPhotoImageView.image else {
+            return
+        }
+        
+       FiltersService().applyFilter(to: sourceImage)
+        .subscribe(onNext: { filteredImage in
+            
+            DispatchQueue.main.async {
+                self.MainPhotoImageView.image = filteredImage
+            }
+            
+        }).disposed(by: disposeBag)
+        
+    }
+    
 }
 
