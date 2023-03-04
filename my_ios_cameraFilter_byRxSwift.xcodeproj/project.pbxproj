@@ -16,6 +16,7 @@
 		419A9B6029B1ED2300D8A5DC /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A9B5F29B1ED2300D8A5DC /* PhotoCollectionViewController.swift */; };
 		419A9B6329B2261C00D8A5DC /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A9B6229B2261C00D8A5DC /* FilterService.swift */; };
 		419A9B6529B2294400D8A5DC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A9B6429B2294400D8A5DC /* PhotoCollectionViewCell.swift */; };
+		419A9B6A29B2F3A800D8A5DC /* my_ios_CameraFilter_demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 419A9B6929B2F3A700D8A5DC /* my_ios_CameraFilter_demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		419A9B5F29B1ED2300D8A5DC /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		419A9B6229B2261C00D8A5DC /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		419A9B6429B2294400D8A5DC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		419A9B6929B2F3A700D8A5DC /* my_ios_CameraFilter_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = my_ios_CameraFilter_demo.gif; sourceTree = "<group>"; };
 		771DCB52F02BD1B0D563A69E /* Pods-my_ios_cameraFilter_byRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my_ios_cameraFilter_byRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-my_ios_cameraFilter_byRxSwift/Pods-my_ios_cameraFilter_byRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		8311D1701B23AEC431B13A67 /* Pods-my_ios_cameraFilter_byRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my_ios_cameraFilter_byRxSwift.release.xcconfig"; path = "Target Support Files/Pods-my_ios_cameraFilter_byRxSwift/Pods-my_ios_cameraFilter_byRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +51,7 @@
 		419A9B3F29B1E84400D8A5DC = {
 			isa = PBXGroup;
 			children = (
+				419A9B6829B2F35800D8A5DC /* Demo */,
 				419A9B4A29B1E84400D8A5DC /* my_ios_cameraFilter_byRxSwift */,
 				419A9B4929B1E84400D8A5DC /* Products */,
 				CE215A4FD16DED19CCA2DB29 /* Pods */,
@@ -102,6 +105,14 @@
 				419A9B6229B2261C00D8A5DC /* FilterService.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		419A9B6829B2F35800D8A5DC /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				419A9B6929B2F3A700D8A5DC /* my_ios_CameraFilter_demo.gif */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		44D64D7A7300048CEE7D35BF /* Frameworks */ = {
@@ -181,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419A9B6A29B2F3A800D8A5DC /* my_ios_CameraFilter_demo.gif in Resources */,
 				419A9B5829B1E84600D8A5DC /* LaunchScreen.storyboard in Resources */,
 				419A9B5529B1E84600D8A5DC /* Assets.xcassets in Resources */,
 			);
